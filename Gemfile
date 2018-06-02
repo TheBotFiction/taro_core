@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Declare your gem's dependencies in taro_core.gemspec.
@@ -13,3 +13,39 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
+
+gem "bootsnap", ">= 1.1.0", require: false
+gem "puma", "~> 3.11"
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "guard-bundler"
+  gem "guard-rails"
+  gem "guard-rspec"
+  gem "listen", ">= 3.0.5", "< 3.2"
+  gem "rails-erd", require: false
+  gem "rb-fchange", require: false
+  gem "rb-fsevent", require: false
+  gem "rb-inotify", require: false
+  gem "spring"
+  gem "spring-commands-rspec"
+  gem "spring-watcher-listen", "~> 2.0.0"
+end
+
+group :development, :test do
+  gem "factory_bot_rails"
+  gem "faker"
+  gem "pry-rails"
+  gem "pry-rescue"
+  gem "rspec-rails"
+  gem "rubocop-github"
+  gem "rubocop-rspec"
+end
+
+group :test do
+  gem "database_cleaner"
+  gem "shoulda-matchers", "~> 3.1"
+  gem "simplecov", require: false
+  gem "timecop"
+end
