@@ -15,6 +15,7 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 gem "bootsnap", ">= 1.1.0", require: false
+gem "haml"
 gem "puma", "~> 3.11"
 
 group :development do
@@ -23,6 +24,7 @@ group :development do
   gem "guard-bundler"
   gem "guard-rails"
   gem "guard-rspec"
+  gem "haml-rails", require: false
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "rails-erd", require: false
   gem "rb-fchange", require: false
