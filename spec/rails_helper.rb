@@ -2,7 +2,7 @@ require "simplecov"
 SimpleCov.start "rails" do
   add_filter "app/models/application_record"
   add_filter "lib/generators/*"
-  add_filter "lib/*/version"
+  add_filter "lib/taro_core/version.rb"
 end
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'

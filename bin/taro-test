@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+APP_ROOT = File.expand_path("..", __dir__)
+Dir.chdir(APP_ROOT) do
+  begin
+    exec <<-SCRIPT
+      bundle exec rubocop &&\
+      bundle exec rspec -fd
+    SCRIPT
+  rescue Errno::ENOENT => e
+    $stderr.puts e
+    $stderr.puts e.backtrace
+    exit 1
+  end
+end
