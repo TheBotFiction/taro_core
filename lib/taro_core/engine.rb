@@ -8,6 +8,8 @@ module TaroCore
       g.javascripts false
       g.stylesheets false
       g.views false
+      g.resource_route false
+      g.scaffold_stylesheet false
       g.fixture_replacement :factory_bot
       g.factory_bot dir: "spec/factories"
     end
