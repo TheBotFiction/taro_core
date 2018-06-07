@@ -24,6 +24,11 @@ RSpec.describe M::Term, type: :model do
     subject { build(:m_term) }
     it { is_expected.to respond_to(:save) }
     it { expect { subject.save }.to change { described_class.count }.by(1) }
+    it "attribute shuffling" do
+      expect(subject.shuffling).to be_falsy
+      subject.save
+      expect(subject.shuffling).to be_truthy
+    end
   end
 
   describe "#update" do

@@ -3,6 +3,7 @@ FactoryBot.define do
     term "MyString"
     meaning "MyString"
     spelling "MyString"
+    gid nil
     shuffling ""
   end
 end

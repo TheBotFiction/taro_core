@@ -37,9 +37,11 @@ ActiveRecord::Schema.define(version: 2018_06_04_163928) do
     t.string "term"
     t.string "meaning"
     t.string "spelling"
+    t.integer "gid"
     t.bigint "shuffling", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["gid"], name: "index_m_terms_on_gid"
     t.index ["meaning"], name: "index_m_terms_on_meaning"
     t.index ["shuffling"], name: "index_m_terms_on_shuffling"
     t.index ["spelling"], name: "index_m_terms_on_spelling"
