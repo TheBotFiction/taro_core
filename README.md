@@ -1,4 +1,5 @@
 # TaroCore
+[![CircleCI](https://circleci.com/gh/yeuem1vannam/taro_core/tree/master.svg?style=svg)](https://circleci.com/gh/yeuem1vannam/taro_core/tree/master) [![BCH compliance](https://bettercodehub.com/edge/badge/yeuem1vannam/taro_core?branch=master)](https://bettercodehub.com/) [![codebeat badge](https://codebeat.co/badges/159324af-dc11-4f5a-8f16-4d317475de49)](https://codebeat.co/projects/github-com-yeuem1vannam-taro_core-master)
 Short description and motivation.
 
 ## Usage
