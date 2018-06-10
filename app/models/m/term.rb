@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class M::Term < ApplicationRecord
   TWO_POW_63 = 9223372036854775808
 
