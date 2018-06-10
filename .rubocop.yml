@@ -7,3 +7,4 @@ AllCops:
   Exclude:
     - db/seeds/**/*
     - db/schema.rb
+    - vendor/**/*
