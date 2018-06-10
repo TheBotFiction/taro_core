@@ -1,5 +1,5 @@
 # TaroCore
-[![CircleCI](https://circleci.com/gh/yeuem1vannam/taro_core/tree/master.svg?style=svg)](https://circleci.com/gh/yeuem1vannam/taro_core/tree/master) [![BCH compliance](https://bettercodehub.com/edge/badge/yeuem1vannam/taro_core?branch=master)](https://bettercodehub.com/) [![codebeat badge](https://codebeat.co/badges/159324af-dc11-4f5a-8f16-4d317475de49)](https://codebeat.co/projects/github-com-yeuem1vannam-taro_core-master) [![Report](https://inspecode.rocro.com/badges/github.com/yeuem1vannam/taro_core/report?token=BeFo6g44bqFCmchdVkm_yrfGz7_TYoMXtsIXD28ieUI&branch=master)](https://inspecode.rocro.com/reports/github.com/yeuem1vannam/taro_core/branch/master/summary)
+[![CircleCI](https://circleci.com/gh/TheBotFiction/taro_core.svg?style=svg)](https://circleci.com/gh/TheBotFiction/taro_core) [![BCH compliance](https://bettercodehub.com/edge/badge/TheBotFiction/taro_core?branch=master)](https://bettercodehub.com/) [![codebeat badge](https://codebeat.co/badges/da81b231-280d-42c8-844c-11a4b7607747)](https://codebeat.co/projects/github-com-thebotfiction-taro_core-master) [![Report](https://inspecode.rocro.com/badges/github.com/TheBotFiction/taro_core/report?token=BeFo6g44bqFCmchdVkm_yrfGz7_TYoMXtsIXD28ieUI&branch=master)](https://inspecode.rocro.com/reports/github.com/TheBotFiction/taro_core/branch/master/summary)
 
 Short description and motivation.
 
@@ -10,7 +10,7 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'taro_core'
+gem "taro_core"
 ```
 
 And then execute:
