@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TaroCore
   class Engine < ::Rails::Engine
     # :nocov:

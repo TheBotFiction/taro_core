@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
@@ -43,7 +45,7 @@ end
 # zeus: false                          # enables zeus gem.
 # CLI: 'rails server'                  # customizes runner command. Omits all options except `pid_file`!
 
-guard "rails", root: "./spec/dummy" do
+guard "rails", root: "./spec/dummy", start_on_start: false do
   watch("Gemfile.lock")
   watch(%r{^(config|lib)/.*})
 end
