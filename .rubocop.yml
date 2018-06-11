@@ -8,3 +8,4 @@ AllCops:
     - db/seeds/**/*
     - db/schema.rb
     - vendor/**/*
+    - ./**/db/schema.rb
