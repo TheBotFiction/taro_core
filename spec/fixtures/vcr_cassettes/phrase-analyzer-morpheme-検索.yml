@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://jlp.yahooapis.jp/MAService/V1/parse
+    body:
+      encoding: UTF-8
+      string: appid=dj00aiZpPWdkVDdudjlKdG5NdiZzPWNvbnN1bWVyc2VjcmV0Jng9ZGI-&sentence=%E6%A4%9C%E7%B4%A2&results=ma&response=surface,reading,baseform&filter=1|2|3|4|5|6|7|8|9|10
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 12 Jun 2018 17:27:32 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '304'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Age:
+      - '2'
+      Connection:
+      - keep-alive
+      Via:
+      - http/1.1 edge1403.img.bbt.yahoo.co.jp (ApacheTrafficServer [c sSf ])
+      Server:
+      - ATS
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiID8+PFJlc3VsdFNldCB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4bWxucz0idXJuOnlhaG9vOmpwOmpscCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJ1cm46eWFob286anA6amxwIGh0dHBzOi8vamxwLnlhaG9vYXBpcy5qcC9NQVNlcnZpY2UvVjEvcGFyc2VSZXNwb25zZS54c2QiPjxtYV9yZXN1bHQ+PHRvdGFsX2NvdW50PjE8L3RvdGFsX2NvdW50PjxmaWx0ZXJlZF9jb3VudD4xPC9maWx0ZXJlZF9jb3VudD48d29yZF9saXN0Pjx3b3JkPjxzdXJmYWNlPuaknOe0ojwvc3VyZmFjZT48cmVhZGluZz7jgZHjgpPjgZXjgY88L3JlYWRpbmc+PGJhc2Vmb3JtPuaknOe0ojwvYmFzZWZvcm0+PC93b3JkPjwvd29yZF9saXN0PjwvbWFfcmVzdWx0PjwvUmVzdWx0U2V0Pg==
+    http_version: 
+  recorded_at: Tue, 12 Jun 2018 17:27:33 GMT
+recorded_with: VCR 4.0.0
