@@ -18,6 +18,8 @@ gemspec
 
 gem "bootsnap", ">= 1.1.0", require: false
 gem "haml"
+gem "pragmatic_segmenter"
+gem "yahoo-japanese-analysis"
 gem "puma", "~> 3.11"
 
 group :development do
