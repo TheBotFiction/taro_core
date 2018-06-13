@@ -17,10 +17,8 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 gem "bootsnap", ">= 1.1.0", require: false
-gem "haml"
-gem "pragmatic_segmenter"
+# gem "haml"
 gem "puma", "~> 3.11"
-gem "yahoo-japanese-analysis"
 
 group :development do
   gem "better_errors"
@@ -28,9 +26,9 @@ group :development do
   gem "guard-bundler"
   gem "guard-rails"
   gem "guard-rspec"
-  gem "haml-rails", require: false
+  # gem "haml-rails", require: false
   gem "listen", ">= 3.0.5", "< 3.2"
-  gem "rails-erd", require: false
+  gem "rails-erd",  require: false
   gem "rb-fchange", require: false
   gem "rb-fsevent", require: false
   gem "rb-inotify", require: false

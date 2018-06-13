@@ -27,9 +27,8 @@ jobs:
           - v1-dependencies-
 
       - run:
-          name: install dependencies
-          command: |
-            bundle install --jobs=4 --retry=3 --path vendor/bundle
+          name: Install dependencies
+          command: bundle check || bundle install --jobs=4 --retry=3 --path vendor/bundle
 
       - save_cache:
           paths:
@@ -39,12 +38,11 @@ jobs:
       # Linting
       - run: bundle exec rubocop
       # Database setup
-      - run: bundle exec rake db:create
-      - run: bundle exec rake db:schema:load
+      - run: bundle exec rake db:setup
 
       # run tests!
       - run:
-          name: run tests
+          name: RSPEC to all
           command: |
             mkdir /tmp/test-results
             TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)"
