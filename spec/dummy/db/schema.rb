@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_11_143825) do
+ActiveRecord::Schema.define(version: 2018_06_04_163928) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -48,25 +48,6 @@ ActiveRecord::Schema.define(version: 2018_06_11_143825) do
     t.index ["shuffling"], name: "index_m_terms_on_shuffling"
     t.index ["spelling"], name: "index_m_terms_on_spelling"
     t.index ["term"], name: "index_m_terms_on_term"
-  end
-
-  create_table "phrases", force: :cascade do |t|
-    t.integer "recipient_id"
-    t.string "term"
-    t.string "meaning"
-    t.string "spelling"
-    t.integer "gid"
-    t.string "level"
-    t.bigint "shuffling", default: 0
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["gid"], name: "index_phrases_on_gid"
-    t.index ["level"], name: "index_phrases_on_level"
-    t.index ["meaning"], name: "index_phrases_on_meaning"
-    t.index ["recipient_id"], name: "index_phrases_on_recipient_id"
-    t.index ["shuffling"], name: "index_phrases_on_shuffling"
-    t.index ["spelling"], name: "index_phrases_on_spelling"
-    t.index ["term"], name: "index_phrases_on_term"
   end
 
   create_table "recipients", force: :cascade do |t|
