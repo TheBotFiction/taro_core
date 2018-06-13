@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :m_term, class: "M::Term" do
+  factory :phrase do
+    recipient
+
     term "MyString"
     meaning "MyString"
     spelling "MyString"

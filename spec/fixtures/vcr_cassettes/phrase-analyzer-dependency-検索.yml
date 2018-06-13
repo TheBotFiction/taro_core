@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://jlp.yahooapis.jp/DAService/V1/parse
+    body:
+      encoding: UTF-8
+      string: appid=dj00aiZpPWdkVDdudjlKdG5NdiZzPWNvbnN1bWVyc2VjcmV0Jng9ZGI-&sentence=%E6%A4%9C%E7%B4%A2
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 12 Jun 2018 17:31:36 GMT
+      Content-Type:
+      - text/xml
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '371'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Via:
+      - http/1.1 edge2254.img.umd.yahoo.co.jp (ApacheTrafficServer [c sSf ])
+      Server:
+      - ATS
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiID8+CjxSZXN1bHRTZXQgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM9InVybjp5YWhvbzpqcDpqbHA6REFTZXJ2aWNlIiB4c2k6c2NoZW1hTG9jYXRpb249InVybjp5YWhvbzpqcDpqbHA6REFTZXJ2aWNlIGh0dHBzOi8vamxwLnlhaG9vYXBpcy5qcC9EQVNlcnZpY2UvVjEvcGFyc2VSZXNwb25zZS54c2QiPgo8UmVzdWx0Pgo8Q2h1bmtMaXN0Pgo8Q2h1bms+CjxJZD4wPC9JZD4KPERlcGVuZGVuY3k+LTE8L0RlcGVuZGVuY3k+CjxNb3JwaGVtTGlzdD4KPE1vcnBoZW0+CjxTdXJmYWNlPuaknOe0ojwvU3VyZmFjZT48UmVhZGluZz7jgZHjgpPjgZXjgY88L1JlYWRpbmc+PEJhc2Vmb3JtPuaknOe0ojwvQmFzZWZvcm0+PFBPUz7lkI3oqZ48L1BPUz48RmVhdHVyZT7lkI3oqZ4s5ZCN44K15LuWLCos5qSc57SiLOOBkeOCk+OBleOBjyzmpJzntKI8L0ZlYXR1cmU+CjwvTW9ycGhlbT4KPC9Nb3JwaGVtTGlzdD4KPC9DaHVuaz4KPC9DaHVua0xpc3Q+CjwvUmVzdWx0Pgo8L1Jlc3VsdFNldD4K
+    http_version: 
+  recorded_at: Tue, 12 Jun 2018 17:31:36 GMT
+recorded_with: VCR 4.0.0

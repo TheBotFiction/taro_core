@@ -10,7 +10,7 @@ class CreateMTerms < ActiveRecord::Migration[5.2]
       t.string  :level
       t.bigint  :shuffling, default: 0
 
-      t.timestamps
+      t.timestamps null: false
     end
     add_index :m_terms, :term
     add_index :m_terms, :meaning
