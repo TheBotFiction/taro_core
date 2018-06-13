@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_11_143825) do
+ActiveRecord::Schema.define(version: 2018_06_13_140733) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -77,6 +77,23 @@ ActiveRecord::Schema.define(version: 2018_06_11_143825) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["uid"], name: "index_recipients_on_uid", unique: true
+  end
+
+  create_table "terms", force: :cascade do |t|
+    t.string "term"
+    t.string "meaning"
+    t.string "spelling"
+    t.integer "gid"
+    t.string "level"
+    t.bigint "shuffling", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["gid"], name: "index_terms_on_gid"
+    t.index ["level"], name: "index_terms_on_level"
+    t.index ["meaning"], name: "index_terms_on_meaning"
+    t.index ["shuffling"], name: "index_terms_on_shuffling"
+    t.index ["spelling"], name: "index_terms_on_spelling"
+    t.index ["term"], name: "index_terms_on_term"
   end
 
 end

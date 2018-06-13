@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-class M::Term < ApplicationRecord
+class Term < ApplicationRecord
   include Shufflable
 end

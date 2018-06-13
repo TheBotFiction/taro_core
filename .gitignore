@@ -98,3 +98,6 @@ coverage
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /**/*/config/master.key
+
+# VCR
+/spec/fixtures/vcr_cassettes/*.yml

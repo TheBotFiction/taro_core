@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :m_term, class: "M::Term" do
+  factory :term do
     term "MyString"
     meaning "MyString"
     spelling "MyString"
-    gid nil
+    gid 1
     level "L1"
     shuffling nil
   end
