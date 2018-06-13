@@ -8,6 +8,8 @@ jobs:
     docker:
       # specify the version you desire here
        - image: circleci/ruby:2.5.1-node-browsers
+         environment:
+           BUNDLE_PATH: vendor/bundle
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -22,18 +24,18 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          - v20180613-dependencies-{{ checksum "Gemfile.lock" }}
           # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          - v20180613-dependencies-
 
       - run:
           name: Install dependencies
-          command: bundle check || bundle install --jobs=4 --retry=3 --path vendor/bundle
+          command: bundle check || bundle install --jobs=4 --retry=3
 
       - save_cache:
           paths:
             - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+          key: v20180613-dependencies-{{ checksum "Gemfile.lock" }}
 
       # Linting
       - run: bundle exec rubocop
