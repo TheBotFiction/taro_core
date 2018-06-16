@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ResultSet
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="urn:yahoo:jp:jlp:DAService" xsi:schemaLocation="urn:yahoo:jp:jlp:DAService https://jlp.yahooapis.jp/DAService/V1/parseResponse.xsd">
+  <Result>
+    <ChunkList>
+      <Chunk>
+        <Id>0</Id>
+        <Dependency>-1</Dependency>
+        <MorphemList>
+          <Morphem>
+            <Surface>検索</Surface>
+            <Reading>けんさく</Reading>
+            <Baseform>検索</Baseform>
+            <POS>名詞</POS>
+            <Feature>名詞,名サ他,*,検索,けんさく,検索</Feature>
+          </Morphem>
+        </MorphemList>
+      </Chunk>
+    </ChunkList>
+  </Result>
+</ResultSet>
