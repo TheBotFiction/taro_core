@@ -22,11 +22,12 @@ class FakeYahooApis < Sinatra::Base
   private
 
   def xml_response(response_code, analyzer)
+    fingerprint = Digest::SHA1.hexdigest params[:sentence]
     content_type "text/xml"
     status response_code
     File.open(
       File.expand_path(
-        "../../fixtures/phrase-analyzer-#{analyzer}-#{params[:sentence]}.xml",
+        "../../fixtures/phrase-analyzer-#{analyzer}-#{fingerprint}.xml",
         __dir__
       ),
       "rb"
