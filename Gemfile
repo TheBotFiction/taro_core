@@ -47,6 +47,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "rubocop-github"
   gem "rubocop-rspec"
+  gem "sinatra",              require: false
 end
 
 group :test do

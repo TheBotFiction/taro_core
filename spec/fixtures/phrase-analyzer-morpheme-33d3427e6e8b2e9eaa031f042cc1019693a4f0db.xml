@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ResultSet
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="urn:yahoo:jp:jlp" xsi:schemaLocation="urn:yahoo:jp:jlp https://jlp.yahooapis.jp/MAService/V1/parseResponse.xsd">
+  <ma_result>
+    <total_count>1</total_count>
+    <filtered_count>1</filtered_count>
+    <word_list>
+      <word>
+        <surface>検索</surface>
+        <reading>けんさく</reading>
+        <baseform>検索</baseform>
+      </word>
+    </word_list>
+  </ma_result>
+</ResultSet>

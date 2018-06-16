@@ -9,3 +9,4 @@ AllCops:
     - db/schema.rb
     - vendor/**/*
     - ./**/db/schema.rb
+  TargetRubyVersion: 2.5

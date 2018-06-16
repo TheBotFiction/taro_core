@@ -30,11 +30,8 @@ RSpec.describe PhraseAnalyzer do
     context "when phrase is `検索`" do
       let(:phrase) { "検索" }
       let(:analyzer) { :morpheme }
-      before do
-        VCR.use_cassette("phrase-analyzer-#{analyzer}-#{phrase}") do
-          subject.call
-        end
-      end
+
+      before { subject.call }
 
       shared_examples "a correct result of #call method" do
         it "returns non empty result" do
@@ -62,6 +59,19 @@ RSpec.describe PhraseAnalyzer do
 
         it_behaves_like "a correct result of #call method"
       end
+    end
+
+    context "when filter is enabled" do
+      let(:phrase) { "ホテルの跡地を市で買い取る約束をした見返りに跡地を所有する建設会社の役員から現金およそ1000万円を受け取ったとして、収賄の疑いで警視庁に逮捕されました" }
+      before { subject.call }
+      it { expect(subject.terms.length).to eq 18 }
+    end
+
+    context "when filter is disabled" do
+      let(:phrase) { "ホテルの跡地を市で買い取る約束をした見返りに跡地を所有する建設会社の役員から現金およそ1000万円を受け取ったとして、収賄の疑いで警視庁に逮捕されました" }
+      subject { described_class.new phrase, filter: false }
+      before { subject.call }
+      it { expect(subject.terms.length).to eq 23 }
     end
   end
 end

@@ -5,7 +5,7 @@ require "yahoo-japanese-analysis"
 class PhraseAnalyzer
   attr_reader :phrase, :terms
 
-  def initialize(phrase, analyzer: :morpheme)
+  def initialize(phrase, analyzer: :morpheme, filter: true)
     @phrase = phrase
     case analyzer
     when :morpheme
@@ -15,15 +15,18 @@ class PhraseAnalyzer
     else
       @analyzer = :morpheme_analyze
     end
+    @filter = filter
   end
 
   def call
-    @terms = send analyzer
+    send analyzer
+    filter_term_list if filter
+    terms
   end
 
   private
 
-  attr_reader :analyzer
+  attr_reader :analyzer, :filter
 
   def client
     return @client if @client
@@ -42,7 +45,7 @@ class PhraseAnalyzer
     return unless dependencies
     dependencies = [dependencies] unless dependencies.is_a?(Array)
 
-    [*dependencies].map { |data_set| dependency_analyze_each_one(data_set) }.flatten
+    @terms = [*dependencies].map { |data_set| dependency_analyze_each_one(data_set) }.flatten
   end
 
   def dependency_analyze_each_one(result)
@@ -70,12 +73,16 @@ class PhraseAnalyzer
     return unless word_list
     word_list = [word_list] unless word_list.is_a?(Array)
 
-    word_list.map do |word|
+    @terms = word_list.map do |word|
       {
         term:     word[:baseform],
         spelling: word[:reading],
         surface:  word[:surface]
       }
     end
+  end
+
+  def filter_term_list
+    @terms.reject! { |term| /\p{Han}/ !~ term[:term] }
   end
 end
