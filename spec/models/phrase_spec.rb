@@ -19,6 +19,13 @@ RSpec.describe Phrase, type: :model do
       behavior = -> { Term.count }
       expect { action.call }.to change { behavior.call }.by 4
     end
+    it "does not create term when analyzed result is nil" do
+      allow_any_instance_of(PhraseAnalyzer).to receive(:terms).and_call_original
+      allow_any_instance_of(PhraseAnalyzer).to receive(:terms) { nil }
+      action = -> { described_class.create(build(:phrase).attributes) }
+      behavior = -> { Term.count }
+      expect { action.call }.not_to change { behavior.call }
+    end
   end
 
   describe ".find" do
