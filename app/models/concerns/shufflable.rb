@@ -3,9 +3,9 @@
 module Shufflable
   extend ActiveSupport::Concern
 
-  TWO_POW_63 = 9223372036854775808
-
   included do
+    TWO_POW_63 = 9223372036854775808
+
     before_save :shuffle_it
   end
 
@@ -13,5 +13,8 @@ module Shufflable
 
   def shuffle_it
     self.shuffling = rand(TWO_POW_63)
+  end
+
+  class_methods do
   end
 end

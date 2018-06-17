@@ -17,6 +17,7 @@ class MasterTermImporter
   private
 
   def potential_create_term_by(word)
+    return unless word["word"].present?
     M::Term.find_or_create_by(term: word["word"].strip) do |term|
       term.meaning  = word["mean"].sub(END_WORD_DELIMITER, "")
       term.spelling = word["phonetic"]
