@@ -3,9 +3,9 @@
 module Shufflable
   extend ActiveSupport::Concern
 
-  included do
-    TWO_POW_63 = 9223372036854775808
+  TWO_POW_63 = 9223372036854775808
 
+  included do
     before_save :shuffle_it
   end
 

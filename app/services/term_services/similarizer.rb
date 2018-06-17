@@ -22,7 +22,7 @@ module TermServices
         *shuffle_downside(spell_seed_queries, :spelling)
       ].sample(limit)
       @results = {
-        terms: terms,
+        terms:  terms,
         spells: spells
       }
     end
