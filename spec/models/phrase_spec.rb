@@ -3,6 +3,10 @@
 require "rails_helper"
 
 RSpec.describe Phrase, type: :model do
+  describe "associations" do
+    it { should have_and_belong_to_many :terms }
+  end
+
   describe ".new" do
     it { expect(described_class).to respond_to :new }
   end
@@ -38,7 +42,14 @@ RSpec.describe Phrase, type: :model do
     subject { build :phrase }
     it { is_expected.to respond_to :save }
     it { expect { subject.save }.to change { described_class.count }.by 1 }
+    it { expect { subject.save }.to change { Term.count }.by 4 }
     it_behaves_like "shufflable"
+    it "does not create duplicate terms" do
+      record = subject.dup
+      expect { record.save }.to change { Term.count }.by 4
+      expect { subject.save }.not_to change { Term.count }
+      expect(subject.terms).to eq(record.terms)
+    end
   end
 
   describe "#update" do
@@ -52,5 +63,6 @@ RSpec.describe Phrase, type: :model do
     subject { record }
     it { is_expected.to respond_to :destroy }
     it { expect { subject.destroy }.to change { described_class.count }.by(-1) }
+    it { expect { subject.destroy }.not_to change { Term.count } }
   end
 end

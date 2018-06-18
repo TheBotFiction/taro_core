@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_13_140733) do
+ActiveRecord::Schema.define(version: 2018_06_18_162304) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -67,6 +67,13 @@ ActiveRecord::Schema.define(version: 2018_06_13_140733) do
     t.index ["shuffling"], name: "index_phrases_on_shuffling"
     t.index ["spelling"], name: "index_phrases_on_spelling"
     t.index ["term"], name: "index_phrases_on_term"
+  end
+
+  create_table "phrases_terms", id: false, force: :cascade do |t|
+    t.integer "phrase_id", null: false
+    t.integer "term_id", null: false
+    t.index ["phrase_id", "term_id"], name: "index_phrases_terms_on_phrase_id_and_term_id", unique: true
+    t.index ["term_id", "phrase_id"], name: "index_phrases_terms_on_term_id_and_phrase_id", unique: true
   end
 
   create_table "recipients", force: :cascade do |t|
