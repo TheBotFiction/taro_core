@@ -14,4 +14,7 @@ module Shufflable
   def shuffle_it
     self.shuffling = rand(TWO_POW_63)
   end
+
+  class_methods do
+  end
 end
