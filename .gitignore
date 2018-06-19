@@ -101,3 +101,5 @@ coverage
 
 # VCR
 /spec/fixtures/vcr_cassettes/*.yml
+# Yard
+/.yardoc
