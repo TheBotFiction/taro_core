@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: PhraseServices::Creator
+  
+    &mdash; taro_core
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "PhraseServices::Creator";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../PhraseServices.html" title="PhraseServices (module)">PhraseServices</a></span></span>
+     &raquo; 
+    <span class="title">Creator</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: PhraseServices::Creator
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">PhraseServices::Creator</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/services/phrase_services/creator.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Service which will create phrase for the recipient. Given a raw data and ID
+of recipient then output a Phrase and a Recipient</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../PhraseServices.html" title="PhraseServices (module)">PhraseServices</a></span></span><span class='op'>::</span><span class='const'>Creator</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="PhraseServices::Creator#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='label'>term:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>String</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>recipient_uid:</span> <span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_call'><span class='object_link'><a href="#call-instance_method" title="PhraseServices::Creator#call (method)">call</a></span></span></code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#phrase-instance_method" title="#phrase (instance method)">#<strong>phrase</strong>  &#x21d2; Phrase </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The created phrase.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#recipient-instance_method" title="#recipient (instance method)">#<strong>recipient</strong>  &#x21d2; Recipient </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The recipient who owning phrase.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#call-instance_method" title="#call (instance method)">#<strong>call</strong>  &#x21d2; self </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a Recipient and a Phrase if they are not existed yet.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(data, recipient_uid:)  &#x21d2; self </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(data, recipient_uid:)  &#x21d2; <tt>self</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash&lt;String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>recipient_uid</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of recipient from message</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>data</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:term</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Required</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:spelling</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">:meaning</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/phrase_services/creator.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='label'>recipient_uid:</span><span class='rparen'>)</span>
+  <span class='ivar'>@data</span>         <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span>
+  <span class='ivar'>@recipient_uid</span> <span class='op'>=</span> <span class='id identifier rubyid_recipient_uid'>recipient_uid</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="phrase-instance_method">
+  
+    #<strong>phrase</strong>  &#x21d2; <tt><span class='object_link'><a href="../Phrase.html" title="Phrase (class)">Phrase</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the created phrase</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Phrase.html" title="Phrase (class)">Phrase</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the created phrase</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/phrase_services/creator.rb', line 13</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="PhraseServices::Creator (class)">Creator</a></span></span>
+  <span class='id identifier rubyid_attr_reader'>attr_reader</span> <span class='symbol'>:recipient</span><span class='comma'>,</span> <span class='symbol'>:phrase</span>
+
+  <span class='comment'># @param [Hash&lt;String&gt;] data
+</span>  <span class='comment'># @option data [String] :term Required
+</span>  <span class='comment'># @option data [String] :spelling
+</span>  <span class='comment'># @option data [String] :meaning
+</span>  <span class='comment'># @param [String, Integer] recipient_uid ID of recipient from message
+</span>  <span class='comment'># @return [self]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='label'>recipient_uid:</span><span class='rparen'>)</span>
+    <span class='ivar'>@data</span>         <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span>
+    <span class='ivar'>@recipient_uid</span> <span class='op'>=</span> <span class='id identifier rubyid_recipient_uid'>recipient_uid</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Create a Recipient and a Phrase if they are not existed yet
+</span>  <span class='comment'># @return [self]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span>
+    <span class='ivar'>@recipient</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Recipient.html" title="Recipient (class)">Recipient</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_or_create_by'>find_or_create_by</span><span class='lparen'>(</span><span class='label'>uid:</span> <span class='id identifier rubyid_recipient_uid'>recipient_uid</span><span class='rparen'>)</span>
+    <span class='ivar'>@phrase</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Phrase.html" title="Phrase (class)">Phrase</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_or_create_by'>find_or_create_by</span><span class='lparen'>(</span><span class='label'>term:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:term</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>recipient:</span> <span class='ivar'>@recipient</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_phr'>phr</span><span class='op'>|</span>
+      <span class='id identifier rubyid_phr'>phr</span><span class='period'>.</span><span class='id identifier rubyid_meaning'>meaning</span>   <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:meaning</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_phr'>phr</span><span class='period'>.</span><span class='id identifier rubyid_spelling'>spelling</span>  <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:spelling</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+    <span class='kw'>self</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_private'>private</span>
+
+  <span class='id identifier rubyid_attr_reader'>attr_reader</span> <span class='symbol'>:data</span><span class='comma'>,</span> <span class='symbol'>:recipient_uid</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="recipient-instance_method">
+  
+    #<strong>recipient</strong>  &#x21d2; <tt><span class='object_link'><a href="../Recipient.html" title="Recipient (class)">Recipient</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the recipient who owning phrase</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Recipient.html" title="Recipient (class)">Recipient</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the recipient who owning phrase</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/phrase_services/creator.rb', line 13</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="PhraseServices::Creator (class)">Creator</a></span></span>
+  <span class='id identifier rubyid_attr_reader'>attr_reader</span> <span class='symbol'>:recipient</span><span class='comma'>,</span> <span class='symbol'>:phrase</span>
+
+  <span class='comment'># @param [Hash&lt;String&gt;] data
+</span>  <span class='comment'># @option data [String] :term Required
+</span>  <span class='comment'># @option data [String] :spelling
+</span>  <span class='comment'># @option data [String] :meaning
+</span>  <span class='comment'># @param [String, Integer] recipient_uid ID of recipient from message
+</span>  <span class='comment'># @return [self]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='label'>recipient_uid:</span><span class='rparen'>)</span>
+    <span class='ivar'>@data</span>         <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span>
+    <span class='ivar'>@recipient_uid</span> <span class='op'>=</span> <span class='id identifier rubyid_recipient_uid'>recipient_uid</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Create a Recipient and a Phrase if they are not existed yet
+</span>  <span class='comment'># @return [self]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span>
+    <span class='ivar'>@recipient</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Recipient.html" title="Recipient (class)">Recipient</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_or_create_by'>find_or_create_by</span><span class='lparen'>(</span><span class='label'>uid:</span> <span class='id identifier rubyid_recipient_uid'>recipient_uid</span><span class='rparen'>)</span>
+    <span class='ivar'>@phrase</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Phrase.html" title="Phrase (class)">Phrase</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_or_create_by'>find_or_create_by</span><span class='lparen'>(</span><span class='label'>term:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:term</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>recipient:</span> <span class='ivar'>@recipient</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_phr'>phr</span><span class='op'>|</span>
+      <span class='id identifier rubyid_phr'>phr</span><span class='period'>.</span><span class='id identifier rubyid_meaning'>meaning</span>   <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:meaning</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_phr'>phr</span><span class='period'>.</span><span class='id identifier rubyid_spelling'>spelling</span>  <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:spelling</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+    <span class='kw'>self</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_private'>private</span>
+
+  <span class='id identifier rubyid_attr_reader'>attr_reader</span> <span class='symbol'>:data</span><span class='comma'>,</span> <span class='symbol'>:recipient_uid</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="call-instance_method">
+  
+    #<strong>call</strong>  &#x21d2; <tt>self</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a Recipient and a Phrase if they are not existed yet</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>self</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/services/phrase_services/creator.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span>
+  <span class='ivar'>@recipient</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Recipient.html" title="Recipient (class)">Recipient</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_or_create_by'>find_or_create_by</span><span class='lparen'>(</span><span class='label'>uid:</span> <span class='id identifier rubyid_recipient_uid'>recipient_uid</span><span class='rparen'>)</span>
+  <span class='ivar'>@phrase</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Phrase.html" title="Phrase (class)">Phrase</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_or_create_by'>find_or_create_by</span><span class='lparen'>(</span><span class='label'>term:</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:term</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>recipient:</span> <span class='ivar'>@recipient</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_phr'>phr</span><span class='op'>|</span>
+    <span class='id identifier rubyid_phr'>phr</span><span class='period'>.</span><span class='id identifier rubyid_meaning'>meaning</span>   <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:meaning</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_phr'>phr</span><span class='period'>.</span><span class='id identifier rubyid_spelling'>spelling</span>  <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:spelling</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Jun 20 00:31:48 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.14 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

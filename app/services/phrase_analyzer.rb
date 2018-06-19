@@ -2,9 +2,23 @@
 
 require "yahoo-japanese-analysis"
 
+# Use Yahoo JLP to analyze Japanese phrase into corresponding term
+#
+# @!attribute [r] phrase
+#   @return [String] the input phrase
+# @!attribute [r] terms
+#   @return [Array<Term>] array of created Terms
+# @example
+#   service = PhraseAnalyzer.new("This is a long term")
+#   service.call
+#   service.terms
 class PhraseAnalyzer
   attr_reader :phrase, :terms
 
+  # @param phrase [String] target phrase
+  # @param analyzer [Symbol] One of `:morpheme` or `:dependency`
+  # @param filter [Bool] (true) TRUE to filter returned terms by removeHiragana
+  #   only terms
   def initialize(phrase, analyzer: :morpheme, filter: true)
     @phrase = phrase
     case analyzer
@@ -18,6 +32,8 @@ class PhraseAnalyzer
     @filter = filter
   end
 
+  # return [self]
+  # @todo return self
   def call
     send analyzer
     filter_term_list if filter
@@ -26,8 +42,13 @@ class PhraseAnalyzer
 
   private
 
+  # @!attribute [r] analyzer
+  #   @return [Symbol] analyzer method name
+  # @!attribute [r] filter
+  #   @return [Boolean] TRUE for filtering result terms
   attr_reader :analyzer, :filter
 
+  # @return [Object] Cachable YahooJA client instance
   def client
     return @client if @client
     @client = YahooJA::Client.new
@@ -38,6 +59,8 @@ class PhraseAnalyzer
     @client
   end
 
+  # Analyze phrase by dependency
+  # @return [Array<Hash>]
   def dependency_analyze
     result = client.kakari_uke phrase
     return unless result
@@ -48,6 +71,9 @@ class PhraseAnalyzer
     @terms = [*dependencies].map { |data_set| dependency_analyze_each_one(data_set) }.flatten
   end
 
+  # Transform the raw hash data to a set of hash term
+  # @param result [Hash] a hash presented from XML response from Yahoo JLP
+  # @return [Array<Hash>]
   def dependency_analyze_each_one(result)
     data_set = result.dig :MorphemList, :Morphem
     return unless data_set
@@ -62,6 +88,8 @@ class PhraseAnalyzer
     end
   end
 
+  # Analyze phrase by morpheme
+  # @return [Array<Hash>]
   def morpheme_analyze
     result = client.morpheme_analysis(phrase, {
       results:  "ma",
@@ -82,6 +110,8 @@ class PhraseAnalyzer
     end
   end
 
+  # Only allows term with Kanji character
+  # @return [Array<Hash>]
   def filter_term_list
     @terms.reject! { |term| /\p{Han}/ !~ term[:term] }
   end
