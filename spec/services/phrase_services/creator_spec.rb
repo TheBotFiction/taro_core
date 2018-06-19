@@ -39,7 +39,7 @@ module PhraseServices
         it { expect { subject.call }.not_to change { Phrase.count } }
       end
       context "when existed recipient" do
-        before { create :recipient, uid: recipient_uid}
+        before { create :recipient, uid: recipient_uid }
         it { expect { subject.call }.not_to change { Recipient.count } }
       end
     end
