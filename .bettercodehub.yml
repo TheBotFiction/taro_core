@@ -1,6 +1,8 @@
+component_depth: 2
 exclude:
 - /config/.*
 - /db/.*
+- /docs/.*
 languages:
 - ruby
 - javascript
